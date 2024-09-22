@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruti_app/features/main/bloc/main_bloc.dart';
 import 'package:fruti_app/features/main/pages/main_page.dart';
+import 'package:fruti_app/utils/routes/routes_switch.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const MainPage(),
+        onGenerateRoute: RoutesSwitch.generateRoute,
       ),
     );
   }

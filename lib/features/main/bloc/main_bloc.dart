@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruti_app/utils/base_model.dart';
+import 'package:fruti_app/utils/routes/routes_switch.dart';
 
 class MainBloc extends BaseModel {
   MainBloc();
@@ -8,11 +9,13 @@ class MainBloc extends BaseModel {
   final nameController = TextEditingController();
   final scoreController = TextEditingController();
 
-  void submitName() {
-    // Lógica cuando se presiona el botón de "Jugar"
+  void submitName(BuildContext context) {
     final name = nameController.text;
-    // Realiza alguna acción con el nombre, por ejemplo, navega a una nueva pantalla
-    print('Nombre ingresado: $name');
+    Navigator.pushNamed(
+      context,
+      RoutesSwitch.homePage,
+      arguments: name,
+    );
   }
 
   @override

@@ -35,7 +35,7 @@ class MainForm extends StatelessWidget {
         AppElevatedButton(
           onTap: () {
             if (bloc.formKey.currentState?.validate() == true) {
-              bloc.submitName();
+              bloc.submitName(context);
             } else {
               MessageDisplay.failure(
                 context,
