@@ -52,7 +52,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull re
 
 ## Contacto
 
-Para cualquier consulta o sugerencia, puedes contactarme a través de mi [perfil de GitHub](https://github.com/tu_usuario).
+Para cualquier consulta o sugerencia, puedes contactarme a través de mi [perfil de GitHub](https://github.com/GrullonDev).
 
 ## Licencia
 
