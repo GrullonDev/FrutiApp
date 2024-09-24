@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:fruti_app/features/home/bloc/home_bloc.dart';
 import 'package:fruti_app/features/home/widgets/module_card.dart';
+import 'package:provider/provider.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<HomeBloc>();
+
     return LayoutBuilder(
       builder: (context, constraints) {
         int crossAxisCount;
@@ -30,7 +34,7 @@ class HomeLayout extends StatelessWidget {
               title: 'Sumas',
               icon: Icons.add,
               color: Colors.green,
-              onTap: () => Navigator.pushNamed(context, '/addition_operations'),
+              onTap: () => bloc.sendArguments(),
             ),
             ModuleCard(
               title: 'Restas',

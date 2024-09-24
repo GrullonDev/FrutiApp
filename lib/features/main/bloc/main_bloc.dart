@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruti_app/features/widgets/arguments.dart';
 import 'package:fruti_app/utils/base_model.dart';
 import 'package:fruti_app/utils/routes/routes_switch.dart';
 
@@ -14,7 +15,9 @@ class MainBloc extends BaseModel {
     Navigator.pushNamed(
       context,
       RoutesSwitch.homePage,
-      arguments: name,
+      arguments: Arguments(
+        name: name,
+      ),
     );
   }
 
