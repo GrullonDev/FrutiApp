@@ -4,9 +4,9 @@ import 'package:provider/provider.dart';
 
 class BaseModelScaffold<T extends BaseModel> extends StatefulWidget {
   const BaseModelScaffold({
-    super.key,
     required this.model,
     required this.builder,
+    super.key,
     this.forceBlocBackTap = false,
   });
 

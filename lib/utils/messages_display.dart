@@ -66,7 +66,8 @@ class MessageDisplay {
         return AlertDialog(
           title: const Text('Verifica tu conexión a internet'),
           content: const Text(
-              'Por favor, revisa tu conexión a internet y vuelve a intentarlo.'),
+            'Por favor, revisa tu conexión a internet y vuelve a intentarlo.',
+          ),
           actions: [
             TextButton(
               onPressed: () {
