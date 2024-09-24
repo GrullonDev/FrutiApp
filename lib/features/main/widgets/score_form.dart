@@ -13,7 +13,7 @@ class ScoreWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: context.isSmallPhone ? 10.0 : 16.0,
+        horizontal: context.isMobile ? 10.0 : 16.0,
       ),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.5),
@@ -23,7 +23,7 @@ class ScoreWidget extends StatelessWidget {
         controller: scoreController,
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: context.isSmallPhone ? 14.0 : 12.0,
+          fontSize: context.isMobile ? 14.0 : 12.0,
           color: Colors.purple,
         ),
         decoration: InputDecoration(

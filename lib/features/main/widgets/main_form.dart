@@ -19,18 +19,17 @@ class MainForm extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: context.isSmallPhone
-            ? 10.0
-            : 16.0, // Detectar si es teléfono pequeño
+        horizontal:
+            context.isMobile ? 10.0 : 16.0, // Detectar si es teléfono pequeño
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           LoadSvgAsset(
-            'main',
+            'apple',
             fit: BoxFit.contain,
-            height: context.isTablet ? 200.0 : 150.0, // Ajustar si es tableta
+            height: context.isTablet ? 200.0 : 150.0,
             width: context.isTablet ? 100.0 : 50.0,
           ),
           const SizedBox(height: 16.0),

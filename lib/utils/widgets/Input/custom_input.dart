@@ -29,7 +29,7 @@ class CustomInput extends StatelessWidget {
           controller: nameController,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: context.isSmallPhone ? 14.0 : 18.0,
+            fontSize: context.isMobile ? 14.0 : 18.0,
             color: Colors.purple,
           ),
           decoration: InputDecoration(

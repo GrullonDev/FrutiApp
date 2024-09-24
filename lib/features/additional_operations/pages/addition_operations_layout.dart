@@ -16,57 +16,59 @@ class AdditionOperationsLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
-        context.isMobile ? 16.0 : 12.0,
+        context.isTablet ? 16.0 : 12.0,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text(
-            'Jugador: $player',
-            style: TextStyle(
-              fontSize: context.isTablet ? 30.0 : 20.0,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'Jugador: $player',
+              style: TextStyle(
+                fontSize: context.isTablet ? 30.0 : 20.0,
+              ),
             ),
-          ),
-          Text(
-            'Score: ',
-            style: TextStyle(
-              fontSize: context.isTablet ? 30.0 : 20.0,
+            Text(
+              'Score: ',
+              style: TextStyle(
+                fontSize: context.isTablet ? 30.0 : 20.0,
+              ),
             ),
-          ),
-          Text(
-            'Manzanas: ',
-            style: TextStyle(
-              fontSize: context.isTablet ? 30.0 : 20.0,
+            Text(
+              'Manzanas: ',
+              style: TextStyle(
+                fontSize: context.isTablet ? 30.0 : 20.0,
+              ),
             ),
-          ),
-          const SimpleMathOperation(
-            firstImage: 'panda1',
-            operation: 'addition',
-            secondImage: 'mickey',
-          ),
-          const SizedBox(height: 35),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: context.isTablet ? 124.5 : 110.0,
-                child: const TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Respuesta',
-                    border: OutlineInputBorder(),
+            const SimpleMathOperation(
+              firstImage: 'panda1',
+              operation: 'addition',
+              secondImage: 'mickey',
+            ),
+            const SizedBox(height: 35),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: context.isTablet ? 145.0 : 110.0,
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Respuesta',
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 20.5),
-          AppElevatedButton(
-            onTap: () {},
-            title: 'COMPROBAR',
-            style: UIButtonStyle.elevatedButtonStyle(),
-          ),
-        ],
+              ],
+            ),
+            const SizedBox(height: 20.5),
+            AppElevatedButton(
+              onTap: () {},
+              title: 'COMPROBAR',
+              style: UIButtonStyle.elevatedButtonStyle(),
+            ),
+          ],
+        ),
       ),
     );
   }

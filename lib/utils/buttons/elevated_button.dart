@@ -33,7 +33,7 @@ class AppElevatedButton extends StatelessWidget {
               child: Text(
                 title!,
                 style: TextStyle(
-                  fontSize: context.isSmallPhone ? 16.0 : 20.0,
+                  fontSize: context.isMobile ? 16.0 : 20.0,
                 ),
               ),
             ),
