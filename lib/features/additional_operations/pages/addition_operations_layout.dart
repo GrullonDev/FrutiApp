@@ -46,26 +46,35 @@ class AdditionOperationsLayout extends StatelessWidget {
               operation: 'addition',
               secondImage: 'mickey',
             ),
-            const SizedBox(height: 35),
+            const SizedBox(height: 45),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: context.isTablet ? 145.0 : 110.0,
+                  width: context.isTablet ? 125.0 : 110.0,
+                  height: context.isTablet ? 55.0 : 50.0,
                   child: const TextField(
                     decoration: InputDecoration(
                       labelText: 'Respuesta',
+                      labelStyle: TextStyle(
+                        fontSize: 20.0,
+                      ),
                       border: OutlineInputBorder(),
                     ),
                   ),
                 ),
+                const SizedBox(width: 25),
+                AppElevatedButton(
+                  onTap: () {},
+                  title: 'COMPROBAR',
+                  style: UIButtonStyle.elevatedButtonStyle(
+                    size: Size(
+                      context.isTablet ? 160.0 : 120.0,
+                      context.isTablet ? 60.0 : 50.0,
+                    ),
+                  ),
+                ),
               ],
-            ),
-            const SizedBox(height: 20.5),
-            AppElevatedButton(
-              onTap: () {},
-              title: 'COMPROBAR',
-              style: UIButtonStyle.elevatedButtonStyle(),
             ),
           ],
         ),
