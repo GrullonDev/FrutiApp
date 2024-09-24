@@ -25,26 +25,42 @@ class HomeLayout extends StatelessWidget {
         return GridView.count(
           crossAxisCount: crossAxisCount,
           padding: EdgeInsets.all(padding),
-          children: const <Widget>[
+          children: <Widget>[
             ModuleCard(
               title: 'Sumas',
               icon: Icons.add,
               color: Colors.green,
+              onTap: () => Navigator.pushNamed(context, '/addition_operations'),
             ),
             ModuleCard(
               title: 'Restas',
               icon: Icons.remove,
               color: Colors.red,
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Abriendo módulo')),
+                );
+              },
             ),
             ModuleCard(
               title: 'Multiplicación',
               icon: Icons.close,
               color: Colors.orange,
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Abriendo módulo ')),
+                );
+              },
             ),
             ModuleCard(
               title: 'Operaciones \n      Varias',
               icon: Icons.calculate,
               color: Colors.orange,
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Abriendo módulo ')),
+                );
+              },
             ),
           ],
         );

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fruti_app/utils/responsive/responsive.dart';
 
 class ScoreWidget extends StatelessWidget {
   const ScoreWidget({
-    super.key,
     required this.scoreController,
+    super.key,
   });
 
   final TextEditingController scoreController;
@@ -11,7 +12,9 @@ class ScoreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(
+        horizontal: context.isSmallPhone ? 10.0 : 16.0,
+      ),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.5),
         borderRadius: BorderRadius.circular(12.0),
@@ -19,8 +22,8 @@ class ScoreWidget extends StatelessWidget {
       child: TextFormField(
         controller: scoreController,
         textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 18.0,
+        style: TextStyle(
+          fontSize: context.isSmallPhone ? 14.0 : 12.0,
           color: Colors.purple,
         ),
         decoration: InputDecoration(

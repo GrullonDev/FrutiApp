@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fruti_app/utils/responsive/responsive.dart';
 import 'package:fruti_app/utils/styles/button_style.dart';
 
 class AppElevatedButton extends StatelessWidget {
   const AppElevatedButton({
+    required this.onTap,
     super.key,
     this.title,
     this.child,
-    required this.onTap,
     this.margin = EdgeInsets.zero,
     this.style,
   }) : assert(title != null || child != null);
@@ -29,7 +30,12 @@ class AppElevatedButton extends StatelessWidget {
         onPressed: onTap,
         child: child ??
             FittedBox(
-              child: Text(title!),
+              child: Text(
+                title!,
+                style: TextStyle(
+                  fontSize: context.isSmallPhone ? 16.0 : 20.0,
+                ),
+              ),
             ),
       ),
     );

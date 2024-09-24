@@ -6,8 +6,8 @@ import 'package:fruti_app/utils/widgets/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
-    super.key,
     required this.user,
+    super.key,
   });
 
   final String user;
@@ -22,6 +22,7 @@ class HomePage extends StatelessWidget {
         appBar: const CustomAppbar(
           title: 'FRUTIAPP',
           icon: Icons.games,
+          onBack: null,
         ),
         body: LayoutBuilder(
           builder: (context, constraints) {

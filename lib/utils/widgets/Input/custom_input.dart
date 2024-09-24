@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fruti_app/utils/responsive/responsive.dart';
 
 class CustomInput extends StatelessWidget {
   const CustomInput({
-    super.key,
     required this.formKey,
     required this.nameController,
     required this.hintText,
     required this.errorText,
+    super.key,
   });
 
   final Key formKey;
@@ -27,8 +28,8 @@ class CustomInput extends StatelessWidget {
         child: TextFormField(
           controller: nameController,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 18.0,
+          style: TextStyle(
+            fontSize: context.isSmallPhone ? 14.0 : 18.0,
             color: Colors.purple,
           ),
           decoration: InputDecoration(
